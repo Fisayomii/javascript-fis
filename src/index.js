@@ -1,7 +1,17 @@
 // complete the function
 function prime (num) {
-  // code goes here
+  if (num <= 1) {
+    return false;
+  } else {
+    for (let i = 2; i < num; i++) {
+      if (num % i == 0) {
+        return false;
+      }
+    }
+    return true;
+  }
 }
+console.log(prime(15));
 
 function solution (arg) {
   return prime(arg);
